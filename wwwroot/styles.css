@@ -1,0 +1,93 @@
+.display-4{
+    font-weight: 500;
+    color: #65e7cb;
+}
+.display-4:hover{
+    color: #000;
+}
+
+.flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.div-inline-block{
+    display: inline-block;
+    width: 33%;
+    background-color: #cfcfcf;
+    height: 70px;
+    padding: 10px;
+}
+
+.despesas {
+    background-color: red;
+    color: #ffffff;
+}
+
+
+
+.pesquisa{
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    
+}
+
+.div-inline-block-pesquisa{
+    display: inline-block;   
+    width: 100%;
+    justify-content: space-around;    
+}
+
+.block{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    width: 100%;
+    
+}
+
+.block button{
+    text-align: right;
+}
+.input-adicionar{
+   width: 100%;
+}
+
+.input-adicionar input {
+    padding: 4px;
+    width: 100%;
+    
+}
+
+.input-adicionar button{
+    margin-left: 10px;   
+    text-align: right;  
+}
+
+.btn-adicionar{
+    text-align: right;
+    width: 15%;
+}
+
+.tabela{
+    margin-top: 30px;
+}
+
+.tabela thead{
+    background-color: #cfcfcf;
+}
+
+.despesa-legenda{
+    width: 50px;
+    height: 10px;
+    background-color: red;
+}
+
+.receita-legenda{
+    width: 50px;
+    height: 10px;
+    background-color: green;
+}
