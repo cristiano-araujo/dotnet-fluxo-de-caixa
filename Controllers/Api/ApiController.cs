@@ -3,20 +3,20 @@ using Microsoft.AspNetCore.Mvc;
 using dotnet_fluxo_de_caixa.Models;
 using dotnet_fluxo_de_caixa.db;
 
-namespace dotnet_fluxo_de_caixa.Controllers;
+namespace dotnet_fluxo_de_caixa.Controllers.ApiController;
 
-public class HomeController : Controller
+[Route("/api/caixa")]
+public class ApiController : ControllerBase
 {
-    
-    public HomeController(MeuDbContext context)
+    public ApiController(MeuDbContext context)
     {
-       
         _context = context;
     }
 
     private MeuDbContext _context;
 
-    public IActionResult Index( string tipo ) 
+    [Route("")]
+    public dynamic Index( string tipo ) 
     {
         List<Caixa> lista;
         if(string.IsNullOrEmpty(tipo)){
@@ -27,8 +27,6 @@ public class HomeController : Controller
             lista = caixas;
         }
         
-        ViewBag.lista = lista;
-
         double valorTotal = 0;
         double receitas = 0;
         double despesas = 0;
@@ -47,37 +45,35 @@ public class HomeController : Controller
             
         }
 
-        ViewBag.valorTotal = valorTotal;
-        ViewBag.receitas = receitas;
-        ViewBag.despesas = despesas;
-
-        return View();
+        return new {
+            valorTotal = valorTotal,
+            receitas = receitas,
+            despesas = despesas,
+            lista = lista,
+        };
     }
 
-    [Route("/adicionar")]
-    public IActionResult adicionar()
-    {
-        return View();
-    } 
-      
-    [Route("/adicionar-no-caixa")]
+    [Route("adicionar")]
     [HttpPost]
-    public IActionResult adicionarNoCaixa(Caixa caixa)
+    public dynamic adicionarNoCaixa([FromBody] Caixa caixa)
     {
         _context.Caixas.Add(caixa);
-        _context.SaveChanges();     
-        return Redirect("/");
+        _context.SaveChanges();  
+
+        return caixa;
     }
 
-    [Route("/excluir/{id}")]
-    [HttpGet]
-    public IActionResult excluir(int id)
+    [Route("excluir/{id}")]
+    [HttpDelete]
+    public dynamic excluir(int id)
     {
         var item =  _context.Caixas.Find(id);
         _context.Remove(item);
         _context.SaveChanges();  
 
-        return Redirect("/");
+        return new {
+            Mensagem = "Item excluido"
+        };
     }
-    
-}    
+
+}
