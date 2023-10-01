@@ -9,18 +9,20 @@
         <div class="div-inline-block">
             <b> Valor Total 
             <br>
-            R$ 1.000,00 
+            R$ @ViewBag.valorTotal.ToString("#0.00") 
             </b>
         </div>
         <div class="div-inline-block">
             <b>Receitas
             <br>
-            R$ 500,00</b>
+            R$ @ViewBag.receitas.ToString("#0.00")
+            </b>
         </div>
         <div class="div-inline-block despesas">
             <b>Despesas
             <br>
-            R$ 500,00</b>
+            R$ @ViewBag.despesas.ToString("#0.00")
+            </b>
         </div>
     </div>
     
@@ -32,7 +34,7 @@
             </form>
         </div>
         <div class="div-inline-block-pesquisa btn-adicionar">
-            <a href="#" class="btn btn-primary">Adicionar
+            <a href="/adicionar" class="btn btn-primary">Adicionar
             </a>    
         </div>
     </div>
@@ -44,6 +46,7 @@
                 <th>VALOR</th>
                 <th>STATUS</th>
                 <th></th>
+                <th>EXCLUIR</th>
             </tr>
         </thead>
         <tbody>
@@ -52,9 +55,27 @@
             {
             <tr>
                 <td>@item.Tipo</td>
-                <td>R$ @item.Valor</td>
+                <td>
+                    R$ 
+                     @if (@item.Status == dotnet_fluxo_de_caixa.Models.Status.Saida){
+                       <span>- R$ @item.Valor </span>
+                    }
+                    else{
+                        <span> R$ @item.Valor </span>  
+                    }
+                </td>
                 <td>@item.Status</td>
-                <td><div class="despesa-legenda"></div></td>
+                <td>
+                    @if (@item.Status == dotnet_fluxo_de_caixa.Models.Status.Saida){
+                        <div class="despesa-legenda"></div>
+                    }
+                    else{
+                        <div class="receita-legenda"></div>
+                    }
+                </td>
+                <td>
+                <a class="excluir" href="#" onclick="if(confirm('Confirma Exclusão?')){ window.location.href = '/excluir/@item.Id'}">X</a>
+                </td>
             </tr>
             }
         </tbody>

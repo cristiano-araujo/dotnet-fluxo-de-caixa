@@ -24032,11 +24032,6 @@
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Worspace\\dotnet\\dotnet-fluxo-de-caixa\\Views\\Home\\Privacy.cshtml",
-      "TargetPath": "Views\\Home\\Privacy.cshtml",
-      "FileKind": "mvc"
-    },
-    {
       "FilePath": "c:\\Worspace\\dotnet\\dotnet-fluxo-de-caixa\\Views\\Home\\Test.cshtml",
       "TargetPath": "Views\\Home\\Test.cshtml",
       "FileKind": "mvc"
@@ -24064,6 +24059,11 @@
     {
       "FilePath": "c:\\Worspace\\dotnet\\dotnet-fluxo-de-caixa\\Views\\Shared\\_Layout.cshtml",
       "TargetPath": "Views\\Shared\\_Layout.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Worspace\\dotnet\\dotnet-fluxo-de-caixa\\Views\\Home\\Adicionar.cshtml",
+      "TargetPath": "Views\\Home\\Adicionar.cshtml",
       "FileKind": "mvc"
     }
   ]

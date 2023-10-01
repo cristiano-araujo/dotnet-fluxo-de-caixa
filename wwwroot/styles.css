@@ -1,6 +1,6 @@
 .display-4{
     font-weight: 500;
-    color: #65e7cb;
+    color: #000000;
 }
 .display-4:hover{
     color: #000;
@@ -80,14 +80,34 @@
     background-color: #cfcfcf;
 }
 
+.tabela th{
+    border: none;
+    
+}
+td {
+    text-align: center;
+    
+}
+
 .despesa-legenda{
-    width: 50px;
+    width: 10px;
     height: 10px;
     background-color: red;
+    margin: 10px;
+    
 }
 
 .receita-legenda{
     width: 50px;
     height: 10px;
     background-color: green;
+    margin: 10px;
+    
+}
+
+.excluir{
+    text-decoration: none;
+    color: red;
+    font-size: 20px;
+    text-align: right;  
 }

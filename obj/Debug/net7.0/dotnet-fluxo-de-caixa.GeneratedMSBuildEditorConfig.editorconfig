@@ -16,12 +16,12 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = c:\Worspace\dotnet\dotnet-fluxo-de-caixa
 build_property._RazorSourceGeneratorDebug = 
 
-[c:/Worspace/dotnet/dotnet-fluxo-de-caixa/Views/Home/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+[c:/Worspace/dotnet/dotnet-fluxo-de-caixa/Views/Home/Adicionar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBZGljaW9uYXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Worspace/dotnet/dotnet-fluxo-de-caixa/Views/Home/Privacy.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+[c:/Worspace/dotnet/dotnet-fluxo-de-caixa/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [c:/Worspace/dotnet/dotnet-fluxo-de-caixa/Views/Home/Test.cshtml]
